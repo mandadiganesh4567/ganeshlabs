@@ -2,10 +2,15 @@
 var1="$1"
 var2="$2"
 date=$(date)
-#if [ -z "$var1" ] || [  -z "$var2" ]; then
+
+CHECK()
+if [ -z "$var1" ] || [  -z "$var2" ]; then
+    echo "provide name"
     read -p "give name 1:" var1 
     read -p "give name 2:" var2 
-#fi
+else 
+    echo " ignore"
+fi
 echo "new learner is : $var1"
 echo "$var1  saying Thanks alot !!!! to $var2 at $date"
 
@@ -16,3 +21,4 @@ if [ "$DISK_USAGE" -gt 90 ]; then
 else
     echo "Disk fine"
 fi
+CHECK()
