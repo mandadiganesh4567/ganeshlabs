@@ -1,2 +1,2 @@
 #!/bin/bash
-echo"Im learing new"
+echo Im learing new
