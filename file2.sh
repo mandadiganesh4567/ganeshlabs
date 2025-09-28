@@ -21,4 +21,4 @@ if [ "$DISK_USAGE" -gt 90 ]; then
 else
     echo "Disk fine"
 fi
-CHECK $?
+CHECK 
