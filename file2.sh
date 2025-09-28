@@ -3,7 +3,7 @@ var1="$1"
 var2="$2"
 date=$(date)
 
-CHECK(){
+CHECK() {
 if [ -z "$var1" ] || [  -z "$var2" ]; then
     echo "provide name"
     read -p "give name 1:" var1 
@@ -11,9 +11,10 @@ if [ -z "$var1" ] || [  -z "$var2" ]; then
 else 
     echo " ignore"
 fi
+}
 echo "new learner is : $var1"
 echo "$var1  saying Thanks alot !!!! to $var2 at $date"
-}
+
 DISK_USAGE="85"
 if [ "$DISK_USAGE" -gt 90 ]; then
     echo "Critical alert! Disk space running low."
