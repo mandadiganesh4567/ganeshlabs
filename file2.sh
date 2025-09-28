@@ -12,6 +12,7 @@ else
     echo " ignore"
 fi
 }
+CHECK
 echo "new learner is : $var1"
 echo "$var1  saying Thanks alot !!!! to $var2 at $date"
 
@@ -21,4 +22,3 @@ if [ "$DISK_USAGE" -gt 90 ]; then
 else
     echo "Disk fine"
 fi
-CHECK 
