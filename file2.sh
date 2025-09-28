@@ -1,3 +1,3 @@
 #!/bin/bash
-var1 = "ganeh"
+var1="ganesh"
 echo " new learner is : $var1 "
