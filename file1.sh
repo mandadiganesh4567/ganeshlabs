@@ -1,3 +1,2 @@
 #!/bin/bash
-$a = "Gun"
-echo" Hi This is new learner , $a"
+echo "I'm learning both git and shell"
