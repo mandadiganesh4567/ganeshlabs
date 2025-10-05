@@ -6,5 +6,6 @@ sudo dnf install -y mysql
     echo " sql installed success"
  else
    echo " Installing mysql Now"
+ fi
 }
 Check_Install()
