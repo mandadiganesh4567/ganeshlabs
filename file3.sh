@@ -8,4 +8,4 @@ sudo dnf install -y mysql
    echo " Installing mysql Now"
  fi
 }
-Check_Install()
+Check_Install
