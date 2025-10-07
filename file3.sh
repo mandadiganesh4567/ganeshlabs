@@ -8,6 +8,7 @@ Validate(){
     echo " $3 reason: "
   else  
     echo " $2 is success"
+  fi
 }
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
