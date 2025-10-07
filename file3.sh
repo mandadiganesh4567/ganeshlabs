@@ -9,6 +9,13 @@ else
 
 fi
 
-dnf install mysql -y
+dnf list installed mysql -y
 
 
+if [ $? -ne 0 ]
+then
+  echo " installation faileed and sql not present"
+  dnf install mysql -y
+else  
+  echo " alreday installed enjoy"
+fi
