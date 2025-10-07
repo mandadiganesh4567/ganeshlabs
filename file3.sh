@@ -18,21 +18,24 @@ then
 fi
 
 dnf list installed mysql -y
-dnf list installed git -y
-VALIDATE $? "Listing Mysql" "may be dnf failed"
+
+
 if [ $? -ne 0 ]
 then
   echo " installation faileed and sql not present"
   dnf install mysql -y
+  VALIDATE $? "Listing Mysql" "may be dnf failed"
 else  
   echo " alreday installed enjoy"
 fi
+
 dnf list installed git -y
-VALIDATE $? "Listing git" "may be dnf failed"
+
 if [ $? -ne 0 ]
 then
   echo " installation faileed and sql not present"
-  dnf install mysql -y
+  dnf install git -y
+  VALIDATE $? "Listing git" "may be dnf failed"
 else  
   echo " alreday installed enjoy"
 fi
