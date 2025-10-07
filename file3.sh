@@ -8,3 +8,7 @@ else
   echo "its in privillage mode"
 
 fi
+
+dnf install mysql -y
+
+
