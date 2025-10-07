@@ -24,7 +24,6 @@ fi
 
 dnf list installed mysql -y
 
-
 if [ $? -ne 0 ]
 then
   echo -e " $Rinstallation faileed and sql not present$N"
@@ -39,7 +38,7 @@ dnf list installed git -y
 if [ $? -ne 0 ]
 then
   echo -e " $R installation faileed and sql not present$N"
-  dnf install git -y
+  dnf install gitt -y
   VALIDATE $? "Listing git" "may be dnf failed"
 else  
   echo -e " $G alreday installed enjoy$N"
