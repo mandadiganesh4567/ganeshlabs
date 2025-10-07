@@ -18,6 +18,7 @@ then
 fi
 
 dnf list installed mysql -y
+dnf list installed git -y
 VALIDATE $? "Listing Mysql" "may be dnf failed"
 if [ $? -ne 0 ]
 then
