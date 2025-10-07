@@ -25,16 +25,16 @@ fi
 
 for package in $@
 do
-dnf list installed $packagel -y
+    dnf list installed $package -y
 
-if [ $? -ne 0 ]
-then
-  echo -e " $R installation faileed and sql not present$N"
-  dnf install $package -y
-  VALIDATE $? "Listing $package" "may be dnf failed"
-else  
-  echo -e "$G $package alreday installed enjoy$N"
-fi
+    if [ $? -ne 0 ]
+    then
+      echo -e " $R installation faileed and sql not present$N"
+      dnf install $package -y
+      VALIDATE $? "Listing $package" "may be dnf failed"
+    else  
+      echo -e "$G $package alreday installed enjoy$N"
+    fi
 done
 
 # dnf list installed git -y
