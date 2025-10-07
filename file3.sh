@@ -1,11 +1,10 @@
 #!/bin/bash
-Check_Install() {
-sudo dnf install -y mysql
 
- if [ $? -eq 0 ]; then
-    echo " sql installed success"
- else
-   echo " Installing mysql Now"
- fi
-}
-Check_Install
+USERID=$(id -u)
+if [ $USERID -ne 0 ]
+then
+  echo "its not in privillage mode run with privillage mode"
+else
+  echo "its in privillage mode"
+
+fi
