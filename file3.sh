@@ -22,24 +22,28 @@ then
   exit 1
 fi
 
-dnf list installed mysql -y
 
-if [ $? -ne 0 ]
-then
-  echo -e " $Rinstallation faileed and sql not present$N"
-  dnf install mysql -y
-  VALIDATE $? "Listing Mysql" "may be dnf failed"
-else  
-  echo -e "$G alreday installed enjoy$N"
-fi
-
-dnf list installed git -y
+for package in $@
+do
+dnf list installed $packagel -y
 
 if [ $? -ne 0 ]
 then
   echo -e " $R installation faileed and sql not present$N"
-  dnf install git -y
-  VALIDATE $? "Listing git" "may be dnf failed"
+  dnf install $package -y
+  VALIDATE $? "Listing $package" "may be dnf failed"
 else  
-  echo -e " $G alreday installed enjoy$N"
+  echo -e "$G $package alreday installed enjoy$N"
 fi
+done
+
+# dnf list installed git -y
+
+# if [ $? -ne 0 ]
+# then
+#   echo -e " $R installation faileed and sql not present$N"
+#   dnf install git -y
+#   VALIDATE $? "Listing git" "may be dnf failed"
+# else  
+#   echo -e " $G alreday installed enjoy$N"
+# fi
