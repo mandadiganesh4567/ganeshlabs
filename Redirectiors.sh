@@ -5,7 +5,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%D-%H-%M-%S)
 LOG_FIL="$LOGS_FOLD/$SCRIPT_NAME-$TIMESTAMP.log"
 
-mkdir -p /var/logs/script
+mkdir -p $LOGS_FOLD
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
