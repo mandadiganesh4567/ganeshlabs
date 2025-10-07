@@ -27,7 +27,7 @@ dnf list installed mysql -y
 if [ $? -ne 0 ]
 then
   echo -e " $Rinstallation faileed and sql not present$N"
-  dnf install myhsql -y
+  dnf install mysql -y
   VALIDATE $? "Listing Mysql" "may be dnf failed"
 else  
   echo -e "$G alreday installed enjoy$N"
