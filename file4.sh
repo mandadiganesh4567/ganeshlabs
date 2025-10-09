@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configuration and Variables ---
-LOGS_FOLDER="/var/log/shell-script"
+LOGS_FOLDER="var/log/shell-script"
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 # Use 'basename' to get the clean script name, avoiding the path issue with 'cut'
