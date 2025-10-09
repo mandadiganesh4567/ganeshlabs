@@ -2,10 +2,18 @@
 
 LOging="/var/logs/script"
 Timestamp=$(date +%H%M%S)
-Name=$(echo $0 | cut -d "." -f1 )
-LogFilee="$LOging\ $Name-$Timestamp.log"
 
-mkdir -p $LOging
+# Extract the script name without the extension using 'cut'
+# $0 is the name of the script. We pipe it to 'cut' to use the dot '.' as a delimiter
+# and take the first field (-f1).
+Name=$(echo "$0" | cut -d "." -f1 | cut -d "/" -fNF) # A more complete cut 
+
+# Full path to the log file (Note the use of '/' for a path separator)
+LogFile="$LOging/$Name-$Timestamp.log"
+
+# --- Directory Creation ---
+# Create the log directory if it doesn't exist (Note the '$' for variable reference)
+mkdir -p "$LOging" 
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
