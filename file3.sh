@@ -3,7 +3,7 @@
 LOging="/var/logs/script"
 Timestamp=$(date +%H%M%S)
 Name=$(echo $0 | cut d "'." f1)
-LogFilee=$LOging\ $Name-$Timestamp.log
+LogFilee="$LOging\ $Name-$Timestamp.log"
 
 mkdir -p LOging
 R="\e[31m"
