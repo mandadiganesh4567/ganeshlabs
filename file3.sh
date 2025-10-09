@@ -2,10 +2,10 @@
 
 LOging="/var/logs/script"
 Timestamp=$(date +%H%M%S)
-Name=$(echo $0 | cut -d "." f1 )
+Name=$(echo $0 | cut -d "." -f1 )
 LogFilee="$LOging\ $Name-$Timestamp.log"
 
-mkdir -p LOging
+mkdir -p $LOging
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
