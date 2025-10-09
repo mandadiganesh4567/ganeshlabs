@@ -6,7 +6,7 @@ Timestamp=$(date +%H%M%S)
 # Extract the script name without the extension using 'cut'
 # $0 is the name of the script. We pipe it to 'cut' to use the dot '.' as a delimiter
 # and take the first field (-f1).
-Name=$(echo "$0" | cut -d "." -f1 | cut -d "/" -fNF) # A more complete cut 
+Name=$(echo "$0" | cut -d "." -f1 ) # A more complete cut 
 
 # Full path to the log file (Note the use of '/' for a path separator)
 LogFile="$LOging/$Name-$Timestamp.log"
